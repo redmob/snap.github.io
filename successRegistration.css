@@ -1,0 +1,89 @@
+.congo-heading{
+    font-size: 1.772vw;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #2D2D2D;
+    opacity: 1;
+}
+.congo-success-text{
+    font-size: 1.146vw;
+    font-weight: normal;
+    text-align: center;
+    color: #2D2D2D;
+    opacity: 1;
+}
+.congo-unique-id{
+    font-weight: 600;
+    font-size: 1.355vw;
+    color: #202C3A;
+    opacity: 1;
+}
+.success-regs-img-div{
+    padding: 2.5vw;
+}
+.success-regs-img-div img{
+    width: 75%;
+}
+.success-regs-right-div{
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.subscription-code-div{
+    background: transparent linear-gradient(180deg, #FFCC06 0%, #FFAA27 100%) 0% 0% no-repeat padding-box;
+    border-radius: 66px;
+    opacity: 1;
+    padding: 0.75vw 0;
+}
+.subscription-code{
+    letter-spacing: 9.2px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 2.355vw;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.success-registr-botom-div{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #ECECEC;
+    border-radius: 10px;
+    opacity: 1;
+    padding: 1.5vw;
+}
+.email-verification{
+    color: #1592E6;
+    text-decoration: underline;
+}
+.imp-notes-text{
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991px){
+    .success-regs-right-div{
+        padding-top: 4vw;
+    }
+    .congo-heading{
+        font-size: 6.772vw;
+        margin: 3vw 0;
+    }
+    .congo-success-text{
+        font-size: 3.746vw;
+    }
+    .congo-unique-id{
+        font-size: 5.355vw;
+        margin: 3vw 0;
+    }
+    .subscription-code{
+        font-size: 6.355vw;
+    }
+    .fx-registration-image{
+        justify-content: center;
+        margin: 6vw 0 10vw;
+    }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrpa CDN  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="successRegistration.css">
+</head>
+<body>
+    <div>
+        <div class="snapzed-page-height">
+            <!-- mobile top nav bar -->
+            <div class="d-none-web">
+                <div class="mobile-top-navbar">
+                    <div>
+                        <a href="">
+                            <img class="img-fluid snapzed-mobile-logo" src="images/snapzed-mob-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                    </div>
+                </div>  
+            </div>
+    
+    
+            <div class="row mx-0 row-for-mobile">
+                <input type="checkbox" class="open-sidebar-feature d-none-web" id ="openSideBar">
+                <label class="arrow-left-right-box d-none-web" for="openSideBar">
+                    <svg onClick="openNav()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mh-50px">
+                        <path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="black"></path>
+                        <path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="black"></path>
+                    </svg>
+                </label>
+                <div class="col-lg-2 px-0 col-7 col-md-6 side-bar-tab-view" id="sidebarMenu">
+                    <div class="snapzed-side-nav">
+                        <div class="snapzed-lgo-div d-none-tab">
+                            <img class="img-fluid" src="images/snapzed-logo.svg" alt="">
+                        </div>
+                        <div class="dropdown user-dropdown-parent d-none-web">
+                            <div class="user-logo-div">
+                                <img src="images/user-yellow-logo.svg" alt="">
+                            </div>
+                            <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font" data-toggle="dropdown">
+                                Abhishek Purane
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Link 1</a>
+                                <a class="dropdown-item" href="#">Link 2</a>
+                                <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="side-nav-ul-parent">
+                            <ul class="nav nav-tabs snapzed-side-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font  opacity-05 snapzed-nav-link  color-FFFFFF" data-toggle="tab" href="#snapzedDashboard">
+                                        <img src="images/dashboard-icon.svg" alt="">
+                                        <!-- <span>
+                                            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="noun-dashboard-3846734" d="M169.545,95.074v5.962a1.442,1.442,0,0,1-1.442,1.442h-3.029a1.442,1.442,0,0,1-1.442-1.442V95.074a1.442,1.442,0,0,1,1.442-1.442H168.1a1.442,1.442,0,0,1,1.442,1.442Zm-1.442,8.5h-3.029a1.442,1.442,0,0,0-1.442,1.442v3.173a1.442,1.442,0,0,0,1.442,1.442H168.1a1.442,1.442,0,0,0,1.442-1.442v-3.173a1.442,1.442,0,0,0-1.442-1.442Zm10.087-3.548h-6.106a1.442,1.442,0,0,0-1.442,1.442v6.721a1.442,1.442,0,0,0,1.442,1.442h6.106a1.442,1.442,0,0,0,1.442-1.442v-6.721a1.442,1.442,0,0,0-1.442-1.442Zm0-6.394h-6.106a1.442,1.442,0,0,0-1.442,1.442v2.414a1.442,1.442,0,0,0,1.442,1.442h6.106a1.442,1.442,0,0,0,1.442-1.442V95.075a1.442,1.442,0,0,0-1.442-1.442Z" transform="translate(-163.631 -93.632)" fill="#fff"/>
+                                            </svg>
+                                        </span> -->
+                                        <span class="ml-3">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/my-course-icon.svg" alt="">
+                                        <span class="ml-3">My Course</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedFxRegistration">
+                                        <img src="images/registration-icon.svg" alt="">
+                                        <span class="ml-3">Registration</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyProfile">
+                                        <img src="images/myProfile-icon.svg" alt="">
+                                        <span class="ml-3">My Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/myAffiliates-icon.svg" alt="">
+                                        <span class="ml-3">My Affiliates</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font  opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyReward">
+                                        <img src="images/reward-icon.svg" alt="">
+                                        <span class="ml-3">Rewards</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/transactions-icon.svg" alt="">
+                                        <span class="ml-3">Transactions</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/rechargeBills-icon.svg" alt="">
+                                        <span class="ml-3">Recharge & Bills</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/rewardPoints-icon.svg" alt="">
+                                        <span class="ml-3">Reward Points</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/softwareCenter-icon.svg" alt="">
+                                        <span class="ml-3">Software Center</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/changePass-icon.svg" alt="">
+                                        <span class="ml-3">Change Password</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <img src="images/logout-icon.svg" alt="">
+                                        <span class="ml-3">Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-10 px-0 main-body-mob-position">
+                    <!-- Tab panes -->
+                    <div class="tab-content main-body-tab-content">
+
+                        <!-- My Profile Body -->
+                        <div class="tab-pane active" id="snapzedMyProfile">
+                            <div class="main-body-height">
+                                <!--Fx Registration Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/fx-registration/previousIcon.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">FX Registration</h2>
+                                            <p class="montserrat-font header-path">Dashboard > FX Registration</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Fx Registration Main Body -->
+                                <div class="main-body-parent">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6 d-none-tab">
+                                            <div class="fx-registration-image success-regs-img-div">
+                                                <img class="img-fluid" src="images/fx-registration/successRegistration.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="success-regs-right-div">
+                                                <div>
+                                                    <img src="./images/fx-registration/congratulationImage.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <h3 class="montserrat-font congo-heading">Congratulations...!</h3>
+                                                    <p class="montserrat-font congo-success-text">You have successfully created your Forex Trading Account</p>
+                                                    <p class="montserrat-font congo-unique-id">MT5 ID</p>
+                                                    <div class="subscription-code-div">
+                                                        <p class="montserrat-font subscription-code">14767</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 d-none-web">
+                                            <div class="fx-registration-image success-regs-img-div">
+                                                <img class="img-fluid" src="images/fx-registration/successRegistration.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="success-registr-botom-div">
+                                        <p class="montserrat-font imp-notes-text">Important notes :</p>
+                                        <p class="montserrat-font imp-notes-text">1. Please visit your registered <a href="" class="email-verification">email id for verification</a> of Forex Trading Account.</p>
+                                        <p class="montserrat-font imp-notes-text">2. MT4/MT5 Main as well as Investor Password you will get on your resister email id.</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

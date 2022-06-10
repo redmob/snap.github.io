@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrpa CDN  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
+</head>
+<body>
+    <div>
+        <div class="snapzed-page-height">
+            <!-- mobile top nav bar -->
+            <div class="d-none-web">
+                <div class="mobile-top-navbar">
+                    <div>
+                        <a href="">
+                            <img class="img-fluid snapzed-mobile-logo" src="images/snapzed-mob-logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div>
+                    </div>
+                </div>  
+            </div>
+    
+    
+            <div class="row mx-0 row-for-mobile">
+                <input type="checkbox" class="open-sidebar-feature d-none-web" id ="openSideBar">
+                <label class="arrow-left-right-box d-none-web" for="openSideBar">
+                    <svg onClick="openNav()" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mh-50px">
+                        <path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="black"></path>
+                        <path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="black"></path>
+                    </svg>
+                </label>
+                <div class="col-lg-2 px-0 col-7 col-md-6 side-bar-tab-view" id="sidebarMenu">
+                    <div class="snapzed-side-nav">
+                        <div class="snapzed-lgo-div d-none-tab">
+                            <img class="img-fluid" src="images/snapzed-logo.svg" alt="">
+                        </div>
+                        <div class="dropdown user-dropdown-parent d-none-web">
+                            <div class="user-logo-div">
+                                <img src="images/user-yellow-logo.svg" alt="">
+                            </div>
+                            <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font" data-toggle="dropdown">
+                                Abhishek Purane
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Link 1</a>
+                                <a class="dropdown-item" href="#">Link 2</a>
+                                <a class="dropdown-item" href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="side-nav-ul-parent">
+                            <ul class="nav nav-tabs snapzed-side-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font active opacity-05 snapzed-nav-link  color-FFFFFF" data-toggle="tab" href="#snapzedDashboard">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="noun-dashboard-3846734" d="M169.545,95.074v5.962a1.442,1.442,0,0,1-1.442,1.442h-3.029a1.442,1.442,0,0,1-1.442-1.442V95.074a1.442,1.442,0,0,1,1.442-1.442H168.1a1.442,1.442,0,0,1,1.442,1.442Zm-1.442,8.5h-3.029a1.442,1.442,0,0,0-1.442,1.442v3.173a1.442,1.442,0,0,0,1.442,1.442H168.1a1.442,1.442,0,0,0,1.442-1.442v-3.173a1.442,1.442,0,0,0-1.442-1.442Zm10.087-3.548h-6.106a1.442,1.442,0,0,0-1.442,1.442v6.721a1.442,1.442,0,0,0,1.442,1.442h6.106a1.442,1.442,0,0,0,1.442-1.442v-6.721a1.442,1.442,0,0,0-1.442-1.442Zm0-6.394h-6.106a1.442,1.442,0,0,0-1.442,1.442v2.414a1.442,1.442,0,0,0,1.442,1.442h6.106a1.442,1.442,0,0,0,1.442-1.442V95.075a1.442,1.442,0,0,0-1.442-1.442Z" transform="translate(-163.631 -93.632)" fill="#fff"/>
+                                              </svg>
+                                              
+                                        </span>
+                                        <span class="ml-3">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path id="noun-online-course-2224377" d="M131.731,67.885h2.462V68.5h-7.385v-.615h2.462v-.615h2.462Zm-4.868-3.692H122.5v1.846h16V64.192ZM122.5,52.5V62.962h3.692a4.308,4.308,0,0,1,2.326-3.822,3.077,3.077,0,1,1,3.963,0,4.308,4.308,0,0,1,2.326,3.822H138.5V52.5Zm4.923,10.462h6.154a3.077,3.077,0,0,0-6.154,0Zm4.923-6.154a1.846,1.846,0,1,0-.541,1.305A1.847,1.847,0,0,0,132.346,56.808Z" transform="translate(-122.5 -52.5)" fill="#fff" opacity="0.5"/>
+                                              </svg>
+                                        </span>
+                                        <span class="ml-3">My Course</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedFxRegistration">
+                                        <span> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10.667" viewBox="0 0 16 10.667">
+                                                <path id="noun-registration-2013934" d="M15,200H1a1,1,0,0,0-1,1v8.667a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V201a1,1,0,0,0-1-1ZM2.82,201.82A1.674,1.674,0,1,1,2.333,203a1.674,1.674,0,0,1,.487-1.18Zm3.847,6.847H1.333v-.333a2.667,2.667,0,0,1,5.333,0Zm6.84-.667H8.5a.5.5,0,1,1,0-1h5.01a.5.5,0,1,1,0,1Zm0-2H8.5a.5.5,0,1,1,0-1h5.01a.5.5,0,1,1,0,1Zm0-2H8.5a.5.5,0,1,1,0-1h5.01a.5.5,0,1,1,0,1Z" transform="translate(0 -200)" fill="#fff" opacity="0.5"/>
+                                              </svg>
+                                        </span>
+                                        <span class="ml-3">Registration  <span class="new-label">NEW</span></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyProfile">
+                                        <span> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.302" viewBox="0 0 16 15.302">
+                                                <g id="Group_16269" data-name="Group 16269" transform="translate(1176.515 8427)" opacity="0.5">
+                                                    <path id="Path_31823" data-name="Path 31823" d="M98.954,43.881H90.16v-.258a2.026,2.026,0,0,1,1.308-2.2,17.944,17.944,0,0,0,3.218-1.153,2.944,2.944,0,0,0,.258-.809A4.222,4.222,0,0,1,94.2,37.6c-.155-.017-.379-.241-.6-1.067-.293-1.05-.017-1.273.241-1.273h.052a2.9,2.9,0,0,1-.069-1.7,3.339,3.339,0,0,1,.86-1.532,4.817,4.817,0,0,1,.792-.671,2.748,2.748,0,0,1,.774-.4,3.2,3.2,0,0,1,.706-.138,1.875,1.875,0,0,1,.31-.017,2.732,2.732,0,0,1,1.463.4,2.216,2.216,0,0,1,.86.809s1.566.121.878,3.442c.206.069.361.361.121,1.239-.241.843-.465,1.067-.62,1.067a.248.248,0,0,1-.121-.034,4.1,4.1,0,0,1-.688,1.7,2.062,2.062,0,0,0,.31.912,1.428,1.428,0,0,0,.172.069,4.136,4.136,0,0,0-.688,3.476Zm2.323,1.773a1.817,1.817,0,0,1-1.377.361.127.127,0,0,1-.034-.241,1.569,1.569,0,0,0,.671-.757l-.034-.034a3.155,3.155,0,1,1,.774.671Zm1.239-4.251a.536.536,0,0,0,.533.533.534.534,0,0,0,0-1.067A.536.536,0,0,0,102.516,41.4Zm.121,3.442a2.8,2.8,0,0,0,.379.017.953.953,0,0,0,.688-.31.218.218,0,0,0,.069-.121c.017-.086-.052-.138-.121-.1-.052.017-.1.052-.155.069a1.061,1.061,0,0,1-.189.052c-.086.017-.138-.034-.155-.121a.647.647,0,0,1-.017-.189,2.925,2.925,0,0,1,.069-.379l.206-1.136a1.9,1.9,0,0,0,.034-.31c0-.121-.069-.189-.206-.189h-1a.294.294,0,0,0-.121.017.151.151,0,0,0-.121.1.142.142,0,0,0,.086.138c.052.017.121.017.172.034.138.017.172.069.172.206v.069c-.052.327-.121.654-.172.981-.034.189-.069.379-.086.568a.621.621,0,0,0,.465.6Z" transform="translate(-1266.675 -8457.803)" fill="#fff"/>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="ml-3">My Profile</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyAffiliates">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.333" viewBox="0 0 16 13.333">
+                                                <g id="Group_13133" data-name="Group 13133" transform="translate(2223.531 5875)" opacity="0.5">
+                                                    <path id="Path_31388" data-name="Path 31388" d="M245.75,356.588a1.938,1.938,0,0,0-1.938-1.938h-3.875A1.938,1.938,0,0,0,238,356.588v1.938h7.75v-1.938h0Z" transform="translate(-2457.406 -6220.193)" fill="#fff"/>
+                                                    <path id="Path_31389" data-name="Path 31389" d="M297.875,207.278a1.938,1.938,0,1,1-1.938-1.938,1.938,1.938,0,0,1,1.938,1.938" transform="translate(-2511.469 -6076.287)" fill="#fff"/>
+                                                    <path id="Path_31390" data-name="Path 31390" d="M409.875,95.278a1.938,1.938,0,1,1-1.938-1.938,1.938,1.938,0,0,1,1.938,1.938" transform="translate(-2619.344 -5968.34)" fill="#fff"/>
+                                                    <path id="Path_31391" data-name="Path 31391" d="M185.875,95.278a1.938,1.938,0,1,1-1.938-1.938,1.938,1.938,0,0,1,1.938,1.938" transform="translate(-2403.594 -5968.34)" fill="#fff"/>
+                                                    <path id="Path_31392" data-name="Path 31392" d="M447.857,244.588a1.938,1.938,0,0,0-1.938-1.938h-2.583v2.855a3.237,3.237,0,0,1,1.278,1.02h3.243v-1.937h0Z" transform="translate(-2655.388 -6112.246)" fill="#fff"/>
+                                                    <path id="Path_31393" data-name="Path 31393" d="M126,244.588a1.938,1.938,0,0,1,1.938-1.938h2.583v2.855a3.237,3.237,0,0,0-1.278,1.02H126v-1.937h0Z" transform="translate(-2349.531 -6112.246)" fill="#fff"/>
+                                                </g>
+                                             </svg>
+                                        </span>
+                                        <span class="ml-3">My Affiliates</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font  opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyReward">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.013" viewBox="0 0 16 14.013">
+                                                <path id="Path_69316" data-name="Path 69316" d="M99.193,49.483h-2.24v-.825a.823.823,0,0,0,.758-.808.809.809,0,0,0-.808-.808H87.1a.809.809,0,0,0-.808.808.8.8,0,0,0,.758.808v.825h-2.24a.809.809,0,0,0-.808.808v.657a4.923,4.923,0,0,0,3.655,4.766l1.128.3.017.017c.034.034.067.084.1.118a4.11,4.11,0,0,0,1.9,1.112v1.2a.5.5,0,0,1-.505.505h-.876a.64.64,0,0,0-.64.64v.808a.64.64,0,0,0,.64.64h5.154a.64.64,0,0,0,.64-.64v-.808a.64.64,0,0,0-.64-.64H93.7a.5.5,0,0,1-.505-.505v-1.2a4.109,4.109,0,0,0,1.9-1.112c.034-.034.067-.084.1-.118l.017-.017,1.128-.3A4.938,4.938,0,0,0,100,50.948v-.657a.808.808,0,0,0-.808-.808ZM85.635,51.1h1.432a10.514,10.514,0,0,0,.556,2.863A3.223,3.223,0,0,1,85.635,51.1Zm8.707.606-.792.758a.543.543,0,0,0-.152.438l.2,1.078a.279.279,0,0,1-.1.269.255.255,0,0,1-.286.017l-.96-.522a.547.547,0,0,0-.236-.067.387.387,0,0,0-.236.067l-.96.522a.253.253,0,0,1-.286-.017.292.292,0,0,1-.118-.269l.2-1.078a.429.429,0,0,0-.152-.438l-.792-.758a.258.258,0,0,1-.067-.286.275.275,0,0,1,.219-.185l1.078-.152a.447.447,0,0,0,.371-.27l.472-.977A.261.261,0,0,1,92,49.685a.278.278,0,0,1,.253.152l.472.977a.471.471,0,0,0,.371.27l1.078.152a.275.275,0,0,1,.219.185.248.248,0,0,1-.05.286ZM96.38,53.98a11.306,11.306,0,0,0,.556-2.88h1.432A3.267,3.267,0,0,1,96.38,53.98Z" transform="translate(-84.001 -47.041)" fill="#fff" opacity="0.5"/>
+                                            </svg>
+                                              
+                                        </span>
+                                        <span class="ml-3">Rewards</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedTransactionMain">
+                                        <span> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.47" height="19.691" viewBox="0 0 13.47 19.691">
+                                                <path id="noun-transactions-3849243" d="M217.782,67.376a.6.6,0,0,0-.2-.166.511.511,0,0,0-.528.021l-.083.062-1.181.787-1.274-.85h0a.534.534,0,0,0-.562-.01l-.023.014-1.259.846-1.264-.85a.518.518,0,0,0-.57,0l-1.274.85-1.258-.845-.04-.025a.518.518,0,0,0-.536.021l-1.264.85-1.181-.787-.083-.062a.511.511,0,0,0-.528-.021.862.862,0,0,0-.087.056.483.483,0,0,0-.193.345v18.7a.5.5,0,0,0,.083.29.6.6,0,0,0,.2.166.511.511,0,0,0,.528-.021l.083-.062,1.181-.787,1.264.85a.518.518,0,0,0,.57,0l1.264-.85,1.274.85a.518.518,0,0,0,.57,0l1.264-.85,1.264.85a.535.535,0,0,0,.58,0l1.275-.85,1.181.787.083.062a.586.586,0,0,0,.29.083.483.483,0,0,0,.238-.062.6.6,0,0,0,.2-.166.5.5,0,0,0,.083-.29V67.666a.5.5,0,0,0-.083-.29Zm-8.724,8.061h2.891l-.611-.611a.52.52,0,1,1,.736-.736l1.492,1.5a.491.491,0,0,1,.114.559.518.518,0,0,1-.477.321h-4.145a.518.518,0,0,1,0-1.036Zm4.145,3.108h-2.891l.611.611a.531.531,0,0,1,0,.736.562.562,0,0,1-.373.145.537.537,0,0,1-.363-.145l-1.492-1.5a.491.491,0,0,1-.114-.559.518.518,0,0,1,.477-.321H213.2a.518.518,0,0,1,0,1.036Z" transform="translate(-204.395 -67.145)" fill="#fff" opacity="0.5"/>
+                                            </svg>
+                                              
+                                        </span>
+                                        <span class="ml-3">Transactions</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <span> 
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19.84" viewBox="0 0 16 19.84">
+                                                <g id="Group_13334" data-name="Group 13334" transform="translate(2124.168 5732)" opacity="0.5">
+                                                  <path id="Path_31394" data-name="Path 31394" d="M251.681,473.829a2.619,2.619,0,0,0,2.6-2.621.348.348,0,0,0-.325-.4l-10.433-.033a4.364,4.364,0,0,1-.722,3.028c2.441.01,6.837.02,8.876.024Z" transform="translate(-2363.333 -6185.989)" fill="#fff"/>
+                                                  <path id="Path_31395" data-name="Path 31395" d="M145.183,81.23a2.96,2.96,0,0,1-2.588-2.569H131.584a.321.321,0,0,0-.331.31V93.659a2.155,2.155,0,0,0,2.154,2.152h.187c1.029,0,1.662-.286,1.853-1.748,0-.013.067-.921.039-1.466a.35.35,0,0,1,.354-.357l9.369.03ZM135,88.728l-1.479,1.991c-.264.356-.839-.039-.574-.4l1.078-1.452-1,0a.342.342,0,0,1-.275-.555l1.476-1.748a.362.362,0,0,1,.5-.049.332.332,0,0,1,.051.479l-1.006,1.192.943,0a.342.342,0,0,1,.288.538Zm-.785-3.978a1.852,1.852,0,0,1-1.857-1.843c0-.917,1.331-2.349,1.6-2.627a.366.366,0,0,1,.518,0c.267.278,1.6,1.71,1.6,2.627A1.852,1.852,0,0,1,134.216,84.75Zm7.942,5.556h-3.8a.34.34,0,1,1,0-.681h3.8a.34.34,0,1,1,0,.681Zm1.672-1.64h-5.473a.34.34,0,1,1,0-.681h5.473a.34.34,0,1,1,0,.681Zm-5.451-5.438a.347.347,0,0,1,.353-.34h3.578a.34.34,0,1,1,0,.68h-3.578A.347.347,0,0,1,138.379,83.228Zm5.5-1.194h-5.152a.34.34,0,1,1,0-.68h5.152a.34.34,0,1,1,0,.68Z" transform="translate(-2255.422 -5808.01)" fill="#fff"/>
+                                                  <path id="Path_31396" data-name="Path 31396" d="M179.03,145.636a1.152,1.152,0,1,0,2.3,0,4.714,4.714,0,0,0-1.151-1.962A4.714,4.714,0,0,0,179.03,145.636Z" transform="translate(-2301.387 -5870.773)" fill="#fff"/>
+                                                  <path id="Path_31397" data-name="Path 31397" d="M450.775,8.75a2.323,2.323,0,1,0,2.28,2.323A2.3,2.3,0,0,0,450.775,8.75Zm1.421,1.687-1.612,1.754a.356.356,0,0,1-.466.047l-.711-.516a.356.356,0,0,1-.08-.5.352.352,0,0,1,.493-.08l.458.332,1.4-1.523a.352.352,0,0,1,.5-.02.356.356,0,0,1,.02.5Z" transform="translate(-2561.224 -5740.75)" fill="#fff"/>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="ml-3">Recharge & Bills</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.013" viewBox="0 0 16 14.013">
+                                                <path id="Path_69316" data-name="Path 69316" d="M99.193,49.483h-2.24v-.825a.823.823,0,0,0,.758-.808.809.809,0,0,0-.808-.808H87.1a.809.809,0,0,0-.808.808.8.8,0,0,0,.758.808v.825h-2.24a.809.809,0,0,0-.808.808v.657a4.923,4.923,0,0,0,3.655,4.766l1.128.3.017.017c.034.034.067.084.1.118a4.11,4.11,0,0,0,1.9,1.112v1.2a.5.5,0,0,1-.505.505h-.876a.64.64,0,0,0-.64.64v.808a.64.64,0,0,0,.64.64h5.154a.64.64,0,0,0,.64-.64v-.808a.64.64,0,0,0-.64-.64H93.7a.5.5,0,0,1-.505-.505v-1.2a4.109,4.109,0,0,0,1.9-1.112c.034-.034.067-.084.1-.118l.017-.017,1.128-.3A4.938,4.938,0,0,0,100,50.948v-.657a.808.808,0,0,0-.808-.808ZM85.635,51.1h1.432a10.514,10.514,0,0,0,.556,2.863A3.223,3.223,0,0,1,85.635,51.1Zm8.707.606-.792.758a.543.543,0,0,0-.152.438l.2,1.078a.279.279,0,0,1-.1.269.255.255,0,0,1-.286.017l-.96-.522a.547.547,0,0,0-.236-.067.387.387,0,0,0-.236.067l-.96.522a.253.253,0,0,1-.286-.017.292.292,0,0,1-.118-.269l.2-1.078a.429.429,0,0,0-.152-.438l-.792-.758a.258.258,0,0,1-.067-.286.275.275,0,0,1,.219-.185l1.078-.152a.447.447,0,0,0,.371-.27l.472-.977A.261.261,0,0,1,92,49.685a.278.278,0,0,1,.253.152l.472.977a.471.471,0,0,0,.371.27l1.078.152a.275.275,0,0,1,.219.185.248.248,0,0,1-.05.286ZM96.38,53.98a11.306,11.306,0,0,0,.556-2.88h1.432A3.267,3.267,0,0,1,96.38,53.98Z" transform="translate(-84.001 -47.041)" fill="#fff" opacity="0.5"/>
+                                              </svg>
+                                              
+                                        </span>
+                                        <span class="ml-3">Reward Points</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.996" viewBox="0 0 16 15.996">
+                                                <path id="Path_33504" data-name="Path 33504" d="M82.8,21.508l1.2.211a6.212,6.212,0,0,0,.619,1.493l-.7,1h0a.921.921,0,0,0,.1,1.174l.719.719a.921.921,0,0,0,1.18.1l1-.7a6.211,6.211,0,0,0,1.493.619l.211,1.2a.921.921,0,0,0,.911.762h1a.921.921,0,0,0,.908-.762l.211-1.2h0a6.222,6.222,0,0,0,1.493-.62l1,.7h0a.921.921,0,0,0,1.18-.1l.719-.719a.921.921,0,0,0,.1-1.18l-.7-1a6.2,6.2,0,0,0,.619-1.493l1.2-.211a.921.921,0,0,0,.764-.911v-1a.921.921,0,0,0-.762-.908l-1.2-.211h0a6.206,6.206,0,0,0-.619-1.493l.7-1h0a.921.921,0,0,0-.1-1.18l-.722-.722a.921.921,0,0,0-1.18-.1l-1,.7h0a6.21,6.21,0,0,0-1.493-.62l-.2-1.194a.921.921,0,0,0-.915-.761h-1a.921.921,0,0,0-.908.762l-.211,1.2h0a6.2,6.2,0,0,0-1.493.62l-1-.7h0a.921.921,0,0,0-1.18.1l-.722.716a.921.921,0,0,0-.1,1.18l.7,1h0A6.218,6.218,0,0,0,84,18.472l-1.2.2a.921.921,0,0,0-.762.915v1a.921.921,0,0,0,.762.915Zm4.121-4.531h0a4.378,4.378,0,1,1-1.3,3.116,4.405,4.405,0,0,1,1.3-3.116Zm2.851,1.881-.926-1.68a3.15,3.15,0,0,1,4.106,4.108l-1.672-.926a1.259,1.259,0,0,0-1.5-1.5Zm.266.836a.4.4,0,0,1,.286.689.413.413,0,0,1-.572,0,.4.4,0,0,1,.286-.694Zm-2.227,2.625a3.154,3.154,0,0,1-.687-3.419l1.672.926h0a1.262,1.262,0,0,0,1.5,1.5L91.224,23a3.155,3.155,0,0,1-3.416-.684Z" transform="translate(-82.036 -12.093)" fill="#fff" opacity="0.5"/>
+                                              </svg>
+                                              
+                                        </span>
+                                        <span class="ml-3">Software Center</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedChangePassword">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="11.022" height="15.027" viewBox="0 0 11.022 15.027">
+                                                <path id="Path_69315" data-name="Path 69315" d="M169.454,26.587v-4.02a2.029,2.029,0,0,0-2.027-2.027h-4.432a2.029,2.029,0,0,0-2.027,2.027v4.02a1.489,1.489,0,0,0-1.268,1.472v6.019a1.49,1.49,0,0,0,1.49,1.49h8.042a1.49,1.49,0,0,0,1.49-1.49V28.059a1.489,1.489,0,0,0-1.268-1.472ZM162.995,22h4.432a.568.568,0,0,1,.568.568v4h-5.568v-4A.568.568,0,0,1,162.995,22Zm2.216,10.7a1.461,1.461,0,1,1,1.461-1.461A1.461,1.461,0,0,1,165.211,32.7Z" transform="translate(-159.7 -20.54)" fill="#fff" opacity="0.5"/>
+                                              </svg>
+                                              
+                                        </span>
+                                        <span class="ml-3">Change Password</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link montserrat-font opacity-05 snapzed-nav-link color-FFFFFF" data-toggle="tab" href="#snapzedMyCourse">
+                                        <span> <svg xmlns="http://www.w3.org/2000/svg" width="16.001" height="13.577" viewBox="0 0 16.001 13.577">
+                                            <g id="Group_18281" data-name="Group 18281" transform="translate(16065.331 10080)" opacity="0.5">
+                                              <path id="Path_69313" data-name="Path 69313" d="M180.956,130.572l-2.223,2.264a.968.968,0,0,1-1.371-1.366l.009-.009c.285-.28.191-.509-.211-.509h-7.113a.97.97,0,0,1-.968-.972v.011a.969.969,0,0,1,.968-.972h7.113c.4,0,.5-.228.211-.51l-.009-.009a.968.968,0,0,1,1.371-1.366l2.22,2.233a.86.86,0,0,1,0,1.206Zm-4.168-5.388a.97.97,0,0,1-1.372,1.372,4.849,4.849,0,1,0,0,6.857.97.97,0,0,1,1.372,1.372,6.788,6.788,0,1,1,0-9.6Z" transform="translate(-16230.531 -10203.196)" fill="#fff" fill-rule="evenodd"/>
+                                            </g>
+                                          </svg>
+                                        </span>
+                                        <span class="ml-3">Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-10 px-0 main-body-mob-position">
+                    <!-- Tab panes -->
+                    <div class="tab-content main-body-tab-content">
+    
+                        <!-- Dashboard Body -->
+                        <div class="tab-pane active" id="snapzedDashboard">
+                            <!-- Dashboard - Top Header -->
+                            <div class="top-header-parent">
+                                <div class="logo-heading-parent">
+                                    <div class="header-logo-div">
+                                        <img src="images/dashboard/header-dashboard-icon.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h2 class="montserrat-font active-page-heading">Dashboard</h2>
+                                        <p class="montserrat-font header-path">Dashboard</p>
+                                    </div>
+                                </div>
+
+                                <div class="ml-auto">
+                                    <div class="home-dropdown-parent-div">
+                                        <div class="dropdown user-dropdown-parent d-none-tab">
+                                            <div class="user-logo-div d-none-tab">
+                                                <img src="images/user-yellow-logo.svg" alt="">
+                                            </div>
+                                            <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                Abhishek Purane
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Link 1</a>
+                                                <a class="dropdown-item" href="#">Link 2</a>
+                                                <a class="dropdown-item" href="#">Link 3</a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a class="home-logo-anchor" href="">
+                                                <img src="images/home-icon.svg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dashboard Main Body -->
+                            <div class="main-body-parent">
+                                <div class="dashboard-affiliate-box">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12 col-12">
+                                            <ul class="affiliate-list">
+                                                <li class="odd">
+                                                    <div class="affiliate-earning-box odd">
+                                                        <div class="total-affiliate-box">
+                                                            <h2 class="montserrat-font affiliate-heading color-202C3A">60</h2>
+                                                            <p class="montserrat-font affiliate-text color-202C3A">Total Affiliate</p>
+                                                        </div>
+                                                        <div class="total-affiliate-earningbox">
+                                                            <h2 class="montserrat-font affiliate-heading color-FFFFFF">6,000</h2>
+                                                            <p class="montserrat-font affiliate-text color-FFFFFF">Total Affiliate Earning</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="even">
+                                                    <div class="affiliate-earning-box">
+                                                        <div class="total-affiliate-box">
+                                                            <h2 class="montserrat-font affiliate-heading color-202C3A">25</h2>
+                                                            <p class="montserrat-font affiliate-text color-202C3A">Direct Affiliate</p>
+                                                        </div>
+                                                        <div class="total-affiliate-earningbox">
+                                                            <h2 class="montserrat-font affiliate-heading color-FFFFFF">2,500</h2>
+                                                            <p class="montserrat-font affiliate-text color-FFFFFF">Direct Affiliate Earning</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="odd">
+                                                    <div class="affiliate-earning-box odd">
+                                                        <div class="total-affiliate-box">
+                                                            <h2 class="montserrat-font affiliate-heading color-202C3A">20</h2>
+                                                            <p class="montserrat-font affiliate-text color-202C3A">Indirect Affiliate</p>
+                                                        </div>
+                                                        <div class="total-affiliate-earningbox">
+                                                            <h2 class="montserrat-font affiliate-heading color-FFFFFF">2,000</h2>
+                                                            <p class="montserrat-font affiliate-text color-FFFFFF">Indirect Affiliate Earning</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="even">
+                                                    <div class="affiliate-earning-box">
+                                                        <div class="total-affiliate-box">
+                                                            <h2 class="montserrat-font affiliate-heading color-202C3A">1500</h2>
+                                                            <p class="montserrat-font affiliate-text color-202C3A">Direct Brokerage Earning</p>
+                                                        </div>
+                                                        <div class="total-affiliate-earningbox">
+                                                            <h2 class="montserrat-font affiliate-heading color-FFFFFF">6,000</h2>
+                                                            <p class="montserrat-font affiliate-text color-FFFFFF">Indirect Brokerage Earning</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+            
+                                            </ul>
+                                            <div class="invoice-btn">
+                                                <a href="" class="btn btn-dark">VIEW INVOICE</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5 col-md-12 col-12">
+                                            <div class="affiliatelink-whole-box">
+                                                <div class="affiliate-box">
+                                                    <h2 class="montserrat-font affiliate-link-heading color-202C3A">Affiliate Link</h2>
+                                                    <div class="form-box">
+                                                        <input type="email" class="form-control icontrol montserrat-font"
+                                                            id="exampleFormControlInput1"
+                                                            placeholder="https://snapzfxtrade.azurewebsites.net/reg...">
+                                                    </div>
+                                                    <div class="copylink-box">
+                                                        <a href="" class="copy-link montserrat-font"> 
+                                                            <span>
+                                                                <img src="./images/dashboard/copy.svg" alt=""
+                                                                    class="img-fluid">
+                                                            </span>
+                                                            <span class="ml-3">Copy link</span>
+                                                        </a>
+                                                        <a href="" class="copy-link montserrat-font"> 
+                                                            <span>
+                                                                <img src="./images/dashboard/share.svg" alt=""
+                                                                    class="img-fluid">
+                                                            </span>
+                                                            <span class="ml-3">Share link</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="affiliate-box">
+                                                    <h2 class="montserrat-font affiliate-link-heading color-202C3A">Affiliate Code</h2>
+                                                    <div class="form-box affiliate-code-input">
+                                                        <input type="email" class="form-control icontrol code-icontrol montserrat-font"
+                                                            id="exampleFormControlInput1" placeholder="101833">
+                                                    </div>
+                                                    <div class="copylink-box">
+                                                        <a href="" class="copy-link montserrat-font"> 
+                                                            <span>
+                                                                <img src="./images/dashboard/copy.svg" alt=""
+                                                                    class="img-fluid">
+                                                            </span>
+                                                            <span class="ml-3">Copy Code</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <!--  -->
+                                                <div class="affiliate-box">
+                                                    <div class="happylink-image">
+                                                        <img src="./images/dashboard/happy-link.svg" alt="" class="img-fluid">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- My Course Body -->
+                        <div class="tab-pane fade" id="snapzedMyCourse">
+                            <div class="main-body-height">
+                                <!--My Course- Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/course-top-icon.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">Course</h2>
+                                            <p class="montserrat-font header-path">Dashboard > Course</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Course Main Body -->
+                                <div class="main-body-parent">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item course-nav-item">
+                                            <a class="nav-link active course-body-navbar montserrat-font color-707070 opacity-04" data-toggle="tab" href="#forBeginners">For Beginners</a>
+                                        </li>
+                                        <li class="nav-item course-nav-item">
+                                            <a class="nav-link course-body-navbar montserrat-font color-707070 opacity-04" data-toggle="tab" href="#forProfessional">For Professional</a>
+                                        </li>
+                                        <li class="nav-item course-nav-item">
+                                            <a class="nav-link course-body-navbar montserrat-font color-707070 opacity-04" data-toggle="tab" href="#forSmarts">For Smarts</a>
+                                        </li>
+                                        <li class="nav-item course-nav-item">
+                                            <a class="nav-link course-body-navbar montserrat-font color-707070 opacity-04" data-toggle="tab" href="#forAdvances">For Advances</a>
+                                        </li>
+                                        <li class="nav-item course-nav-item">
+                                            <a class="nav-link course-body-navbar montserrat-font color-707070 opacity-04" data-toggle="tab" href="#forExperts">For Experts</a>
+                                        </li>
+                                    </ul>
+      
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <!-- For Beginners -->
+                                        <div class="tab-pane active" id="forBeginners">
+                                            <div class="course-page-body-parent">
+                                                <div class="row">
+                                                    <div class="col-lg-7">
+                                                        <div class="course-video-div">
+                                                            <!-- <video class="course-video" id='video' controls="controls" preload='none' width="600" poster="https://assets.codepen.io/32795/poster.png">
+                                                                <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+                                                                <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm' />
+                                                                <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg' />
+                                                                <p>Your user agent does not support the HTML5 Video element.</p>
+                                                            </video> -->
+                                                            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                        </div>
+                                                        <div class="video-name-description-div">
+                                                            <h3 class="montserrat-font video-play-heading">What is forex trading?</h3>
+                                                            <p class="montserrat-font color-707070 about-video-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                        </div>
+                                                        <div>
+                                                            <p class="montserrat-font chapter-no-length color-707070">#Chapter 1 | 20 min</p>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div class="count-text-parent">
+                                                                <a href="" class="like-view-icon-div">
+                                                                    <img src="images/like-icon.svg" alt="">
+                                                                </a>
+                                                                <div>
+                                                                    <p class="montserrat-font color-4A4A4A likes-view-count mb-0">100</p>
+                                                                    <p class="montserrat-font color-4A4A4A likes-view-text mb-0">Likes</p>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="count-text-parent view-parent-div">
+                                                                <a href="" class="like-view-icon-div">
+                                                                    <img src="images/views-icon.svg" alt="">
+                                                                </a>
+                                                                <div>
+                                                                    <p class="montserrat-font color-4A4A4A likes-view-count mb-0">500</p>
+                                                                    <p class="montserrat-font color-4A4A4A likes-view-text mb-0">Views</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-lg-5">
+                                                        <div class="chapter-list-parent">
+                                                            <div class="list-language-row">
+                                                                <div>
+                                                                    <p class="montserrat-font course-list-text mb-0">List</p>
+                                                                </div>
+                                                                <div>
+                                                                    <div>
+                                                                        <!-- <button type="button" class="btn dropdown-toggle montserrat-font color-707070 language-dropdown" data-toggle="dropdown">
+                                                                            Language
+                                                                        </button> -->
+                                                                        <select class=" language-dropdown-menu language-dropdown btn">
+                                                                            <option value="" class="montserrat-font color-707070">Language</option>
+                                                                            <!-- <option value="en-US" class="dropdown-item" href="#">English</option>
+                                                                            <option value="hi-In" class="dropdown-item" href="#">Hindi</option>
+                                                                            <option value="ne-NP" class="dropdown-item" href="#">Nepali</option> -->
+                                                                        </select>
+                                                                        <!-- <button class="btn btn-primary translate-btn">Translate</button> -->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+    
+                                                            <div class="video-list-parent">
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 02</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A first-chapter">Why forex trading?</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 03</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A">Indian Market vs Forex...</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 04</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A">Forex market sessions...</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 05</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A">Introduction of Mt4 & M...</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 06</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A">Equity, Leverage, Marg...</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 07</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A">What is Lot size in forex?</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="video-list-child">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-4 col-4">
+                                                                            <div class="chapter-video-div">
+                                                                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-lg-8 col-8">
+                                                                            <div>
+                                                                                <p class="montserrat-font mb-0 chapter-sr-no color-202C3A">Chapter 08</p>
+                                                                                <p class="montserrat-font mb-0 chapter-heading color-202C3A">What is Pips & pipettes...</p>
+                                                                                <p class="montserrat-font mb-0 chapter-length">20 min</p>
+                                                                            </div>
+                                                                            <div class="border-bottom"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <!-- For Professional -->
+                                        <div class="tab-pane fade" id="forProfessional">...</div>
+    
+                                        <!-- For Smarts -->
+                                        <div class="tab-pane fade" id="forSmarts">...</div>
+    
+                                        <!-- For Advances -->
+                                        <div class="tab-pane fade" id="forAdvances">...</div>
+    
+                                        <!-- For Experts -->
+                                        <div class="tab-pane fade" id="forExperts">...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fx Registration Body -->
+                        <div class="tab-pane fade" id="snapzedFxRegistration">
+                            <div class="main-body-height">
+                                <!--Fx Registration Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/fx-registration/fx-rgistration-header-logo.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">FX Registration</h2>
+                                            <p class="montserrat-font header-path">Dashboard > FX Registration</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Fx Registration Main Body -->
+                                <div class="main-body-parent">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-7">
+                                            <div class="fx-registration-image">
+                                                <img class="img-fluid" src="images/fx-registration/fx-registration-graph-image.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="fx-registration-right-col">
+                                                <h2 class="montserrat-font registration-heading">FX Registration</h2>
+                                                <p class="montserrat-font registration-text">Please verify below details and provide password<br class="d-none-tab"> for creating FX trading account.</p>
+                                                <div>
+                                                    <form class="fx-regs-form" action="">
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/fxUser-logo.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="form-control montserrat-font" placeholder="Abhishek Dnyandeo Purane" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="email" class="input-icons-div">
+                                                                <img src="./images/fx-registration/userEmail-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="email" class="form-control montserrat-font" placeholder="puraneabbs@gmail.com" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserPhnNo-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="form-control montserrat-font" placeholder="9011351236" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserGender-Icon.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="form-control montserrat-font" placeholder="Male" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserPassLock-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="form-control montserrat-font" placeholder="Set Password" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserPassLock-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="text" class="form-control montserrat-font" placeholder="Confirm Password" id="">
+                                                        </div>
+                            
+                                                        <a href="./succesRegistration.html" class="btn creat-acc-btn montserrat-font">CREAT FX ACCOUNT</a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- My Profile Body -->
+                        <div class="tab-pane fade" id="snapzedMyProfile">
+                            <div class="main-body-height">
+                                <!-- Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/my-profile/myProfile-icon.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">My Profile</h2>
+                                            <p class="montserrat-font header-path">Dashboard > My Profile</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- My Profile Main Body -->
+                        
+                                <div class="main-body-parent">
+                                    <div class="personal-parent-div">
+                                        <div class="d-flex align-items-center">
+                                            <h2 class="montserrat-font personal-banking-details-heading">Personal details</h2>
+                                            <a href="./personalDetails.html" class="montserrat-font profile-bank-edit-tab"><span class="edit-change-text">EDIT</span></a>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-3 col-6">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">First Name</p>
+                                                    <P class="montserrat-font details-filled-by-user">Abhishek</P>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-2 col-md-3 col-6">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Last Name</p>
+                                                    <P class="montserrat-font details-filled-by-user">Purane</P>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-6 col-md-6 col-6">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Email Address</p>
+                                                    <P class="montserrat-font details-filled-by-user">abhishek_uitest@snapzfx.com</P>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-3 col-6 d-none-web d-md-none">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Mobile Number</p>
+                                                    <P class="montserrat-font details-filled-by-user">+91 9011351236</P>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-3 d-none d-md-block">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Mobile Number</p>
+                                                    <P class="montserrat-font details-filled-by-user">+91 9011351236</P>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-2 col-md-3 col-6">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Gender</p>
+                                                    <P class="montserrat-font details-filled-by-user">Male</P>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-2 col-md-3 col-6">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Country</p>
+                                                    <P class="montserrat-font details-filled-by-user">India</P>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-2 col-md-3 col-6">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">State</p>
+                                                    <P class="montserrat-font details-filled-by-user">Maharashtra</P>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-2 col-md-3 col-6 d-none-web d-md-none">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">City</p>
+                                                    <P class="montserrat-font details-filled-by-user">Pune</P>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="row">
+                                            <div class="col-lg-2 col-md-3 d-none d-md-block">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">City</p>
+                                                    <P class="montserrat-font details-filled-by-user">Pune</P>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-2 col-md-3">
+                                                <div class="details-parameter-child">
+                                                    <p class="montserrat-font subheading-of-details">Date Of Birth</p>
+                                                    <P class="montserrat-font details-filled-by-user">05 March 1995</P>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div>
+                                        <div class="personal-banking-border">
+                        
+                                        </div>
+                                    </div>
+                                    <div class="banking-details-div">
+                                        <div class="d-flex align-items-center">
+                                            <h2 class="montserrat-font personal-banking-details-heading">Banking details</h2>
+                                            <a href="./bankDetails.html" class="montserrat-font profile-bank-edit-tab"><span class="edit-change-text">CHANGE</span></a>
+                                        </div>
+                        
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="details-parameter-child">
+                                                            <p class="montserrat-font subheading-of-details">Full Name As Per Bank</p>
+                                                            <P class="montserrat-font details-filled-by-user">Abhishek Dnyandeo Purane</P>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-3 col-6">
+                                                        <div class="details-parameter-child">
+                                                            <p class="montserrat-font subheading-of-details">Bank Name</p>
+                                                            <P class="montserrat-font details-filled-by-user">Saraswat Bank</P>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="col-lg-3 col-md-3 col-6">
+                                                        <div class="details-parameter-child">
+                                                            <p class="montserrat-font subheading-of-details">IFSC Code</p>
+                                                            <P class="montserrat-font details-filled-by-user">SRCB0000375</P>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="col-lg-3 col-md-3">
+                                                        <div class="details-parameter-child">
+                                                            <p class="montserrat-font subheading-of-details">Account Number</p>
+                                                            <P class="montserrat-font details-filled-by-user">3752XXXXXX14205</P>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="col-lg-4">
+                                                <div class="my-profile-image">
+                                                    <img class="img-fluid" src="./images/my-profile/myProfile-bottom-img.svg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- My Affiliates Body -->
+                        <div class="tab-pane fade" id="snapzedMyAffiliates">
+                            <div class="main-body-height">
+                                <!-- My Affiliates Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/my-affiliates/my-affiliates-icon.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">My Affiliates</h2>
+                                            <p class="montserrat-font header-path">Dashboard > My Affiliates</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- My Affiliates Main Body -->
+
+                                <div class="main-body-parent">
+                                    <div>
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-1 pr-0">
+                                                <h3 class="all-tiers-heading montserrat-font">All Tiers</h3>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <form action="" class="all-tiers-search">
+                                                    <div class="form-group position-relative">
+                                                        <label for="" class="input-icons-div">
+                                                            <img src="./images/my-affiliates/search-icon.svg" alt="">
+                                                        </label>
+                                                        <input type="text" placeholder="Serach affiliates" id="" class="form-control montserrat-font">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="all-tiers-row">
+                                                <div class="acive-tier all-tiers-card-parent ">
+                                                    <div class="active-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-FFCC06">1</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-FFFFFF">10</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">2</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">57</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">3</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">309</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">4</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">5</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">6</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">7</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">8</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">57</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">9</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">309</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">10</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">11</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">12</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent ">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">13</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="normal-tier all-tiers-card-parent">
+                                                    <div class="normal-tier-num all-tiers-card-num">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">14</p>
+                                                    </div>
+                                                    <div class="total-acive-tier mr-2">
+                                                        <p class="montserrat-font active-sr-tier-number color-707070">502</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div>
+                                            <table class="table table-borderless all-tiers-table montserrat-font">
+                                                <thead class="color-707070 all-tiers-table-thead">
+                                                    <tr>
+                                                        <th>Sr.no</th>
+                                                        <th>User id</th>
+                                                        <th>Full name</th>
+                                                        <th>Mobile number</th>
+                                                        <th>Registration date</th>
+                                                        <th>Subscription date</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="color-202C3A all-tiers-table-tbody">
+                                                    <tr>
+                                                        <td>#001</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-FFCC06">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#002</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-00AEEE">Inactive</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#003</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-FFCC06">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#004</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-00AEEE">Inactive</td>
+                                                    </tr>
+                            
+                                                    <tr>
+                                                        <td>#005</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-FFCC06">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#006</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-00AEEE">Inactive</td>
+                                                    </tr>
+                            
+                                                    <tr>
+                                                        <td>#007</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-FFCC06">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#008</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-00AEEE">Inactive</td>
+                                                    </tr>
+                            
+                                                    <tr>
+                                                        <td>#009</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-FFCC06">Active</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#010</td>
+                                                        <td>100001</td>
+                                                        <td>Abhishek Dnyandeo purane</td>
+                                                        <td>+91 9011351236</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>20/04/2022</td>
+                                                        <td class="color-00AEEE">Inactive</td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                            
+                                        <div class="table-bottom-border"></div>
+                            
+                                        <div class="pagination-show-row">
+                                            <div class="show-row-div">
+                                                <p class="montserrat-font bottom-show-text">Show</p>
+                                                <select name="" id="" class="show-row-select">
+                                                    <option value="">10</option>
+                                                    <option value="">11</option>
+                                                    <option value="">12</option>
+                                                </select>
+                                            </div>
+                                            <div class="pagination-div">
+                                                <ul class="pagination">
+                                                    <li><a class="montserrat-font" href="#">PREV</a></li>
+                                                    <li><a class="montserrat-font active-page" href="#">1</a></li>
+                                                    <li><a class="montserrat-font inactive-page" href="#">2</a></li>
+                                                    <li><a class="montserrat-font inactive-page" href="#">3</a></li>
+                                                    <li><a class="montserrat-font" href="#">NEXT</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- My Rewards Body -->
+                        <div class="tab-pane fade" id="snapzedMyReward">
+                            <div class="main-body-height">
+                                <!--Reward- Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/my-rewards/header-reward-logo.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">My Rewards</h2>
+                                            <p class="montserrat-font header-path">Dashboard > My Rewards</p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="total-rewards-parent-div">
+                                           <h2 class="montserrat-font total-rewards-text">Total rewards : Rs.2000</h2> 
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Course Rewards Body -->
+                                <div class="main-body-parent reward-main-body-parent">
+                                    <div class="my-rewards-main-body">
+                                        <!-- Card First Row -->
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/blue-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/blue-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <!-- Card Second Row -->
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/blue-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/blue-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <!-- Card Third Row -->
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/blue-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/yellow-scratch-cards.svg" alt="">
+                                        </div>
+                            
+                                        <div class="my-rewards-cards">
+                                            <img class="img-fluid w-100" src="images/my-rewards/blue-scratch-cards.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Change Password -->
+                        <div class="tab-pane fade" id="snapzedChangePassword">
+                            <div class="main-body-height">
+                                <!--Change Pass- Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/change-pass/change-pass-header-icon.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">Change password</h2>
+                                            <p class="montserrat-font header-path">Dashboard > Change password</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Change Password Main Body -->
+                                <div class="main-body-parent">
+                                    <div class="row change-password-row">
+                                        <div class="col-lg-6 col-md-12 col-12">
+                                            <div class="change-pwd-container change-pass-img-div">
+                                                <img src="./images/change-pass/change-pass-left-img.svg" alt="" class="img-fluid w-100">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-12">
+                                            <div class="change-pwd-container">
+                                                <div class="unlock-key">
+                                                    <img src="./images/change-pass/chabge-pass-key-image.svg" alt="" class="img-fluid">
+                                                </div>
+                                                <h2 class="montserrat-font change-pass-heading color-202C3A">Change Password</h2>
+                                                <div>
+                                                    <form class="fx-regs-form pr-0 change-pass-form" action="">
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserPassLock-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="password" class="form-control montserrat-font" placeholder="Old Password" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserPassLock-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="password" class="form-control montserrat-font" placeholder="Set Password" id="">
+                                                        </div>
+                            
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./images/fx-registration/UserPassLock-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="password" class="form-control montserrat-font" placeholder="Confirm Password" id="">
+                                                        </div>
+                            
+                                                        <a href="./succesRegistration.html" class="btn creat-acc-btn montserrat-font">SUBMIT</a>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transactions Body -->
+                        <div class="tab-pane fade" id="snapzedTransactionMain">
+                            <div class="main-body-height">
+                                <!--Transaction Top Header -->
+                                <div class="top-header-parent">
+                                    <div class="logo-heading-parent">
+                                        <div class="header-logo-div">
+                                            <img src="images/transaction/transaction-header-logo.svg" alt="">
+                                        </div>
+                                        <div>
+                                            <h2 class="montserrat-font active-page-heading">Transactions</h2>
+                                            <p class="montserrat-font header-path">Dashboard > Transactions</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="ml-auto">
+                                        <div class="home-dropdown-parent-div">
+                                            <div class="dropdown user-dropdown-parent d-none-tab">
+                                                <div class="user-logo-div d-none-tab">
+                                                    <img src="images/user-yellow-logo.svg" alt="">
+                                                </div>
+                                                <button type="button" class="btn btn-user-dropdown dropdown-toggle color-FFFFFF montserrat-font d-none-mob" data-toggle="dropdown">
+                                                    Abhishek Purane
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a class="home-logo-anchor" href="">
+                                                    <img src="images/home-icon.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- Transaction Main Body -->
+                                <div class="main-body-parent">
+                                    <div>
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-2">
+                                                <h3 class="all-tiers-heading montserrat-font mb-0">EPocket balance</h3>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="rs-withdrawal-parent">
+                                                    <div class="rs-number-box">
+                                                        <h3 class="montserrat-font color-FFFFFF rupees-number">Rs.20,000</h3>
+                                                    </div>
+                                                    <div class="withdrawal-box">
+                                                        <a href="" class="btn montserrat-font withdrawal-text">Withdrawal</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rs-withdrawl-bottom-border">
+                            
+                                        </div>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <h3 class="montserrat-font color-202C3A record-filter-heading">Transactions record (400)</h3>
+                                                    <form action="" class="all-tiers-search">
+                                                        <div class="form-group position-relative">
+                                                            <label for="" class="input-icons-div">
+                                                                <img src="./assets/images/my-affiliates/search-icon.svg" alt="">
+                                                            </label>
+                                                            <input type="text" placeholder="Serach by id" id="" class="form-control montserrat-font">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <h3 class="montserrat-font color-202C3A record-filter-heading">Search by filter</h3>
+                                                    <div class="d-flex">
+                                                        <div>
+                                                            <select class="transaction-type-dropdown montserrat-font" name="transactionType" id="transactionType">
+                                                                <option value="">Transaction type</option>
+                                                                <option value="">Cheque</option>
+                                                            </select>
+                                                        </div>
+                                
+                                                        <div>
+                                                            <form action="" class="all-tiers-search search-filter-form">
+                                                                <div class="form-group position-relative ml-3">
+                                                                    <!-- <label for="" class="input-icons-div">
+                                                                        <img src="./assets/images/my-affiliates/search-icon.svg" alt="">
+                                                                    </label> -->
+                                                                    <input type="date" placeholder="From" id="" class="form-control montserrat-font">
+                                                                </div>
+                                                                <div class="form-group position-relative ml-3 mr-3">
+                                                                    <!-- <label for="" class="input-icons-div">
+                                                                        <img src="./assets/images/my-affiliates/search-icon.svg" alt="">
+                                                                    </label> -->
+                                                                    <input type="date" placeholder="From" id="" class="form-control montserrat-font">
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn common-clear-apply-btn apply-btn montserrat-font">Apply</button>
+                                                                </div>
+                                                                <div>
+                                                                    <button class="btn common-clear-apply-btn clear-btn montserrat-font">Clear All</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            
+                                        <div>
+                                            <table class="table table-borderless all-tiers-table montserrat-font">
+                                                <thead class="color-707070 all-tiers-table-thead">
+                                                    <tr>
+                                                        <th>Trans id</th>
+                                                        <th>Date</th>
+                                                        <th>Time</th>
+                                                        <th>Type</th>
+                                                        <th>Amount</th>
+                                                        <th class="text-left">Remarks</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="color-202C3A all-tiers-table-tbody">
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Deposit</td>
+                                                        <td>100.00</td>
+                                                        <td class="text-left">109037- Samadhan choughule is registered under you on level 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Deposit</td>
+                                                        <td>35.00</td>
+                                                        <td class="text-left">109037- Samadhan choughule is registered under you on level 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Withdrawal</td>
+                                                        <td>35.00</td>
+                                                        <td class="text-left">109037- Ruby shaw traded under you with size of 0.030000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Deposit</td>
+                                                        <td>100.00</td>
+                                                        <td class="text-left">109037- Ruby shaw traded under you with size of 0.030000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Withdrawal</td>
+                                                        <td>100.00</td>
+                                                        <td class="text-left">109037- Samadhan choughule is registered under you on level 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Deposit</td>
+                                                        <td>100.00</td>
+                                                        <td class="text-left">109037- Ruby shaw traded under you with size of 0.030000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Withdrawal</td>
+                                                        <td>35.00</td>
+                                                        <td class="text-left">109037- Ruby shaw traded under you with size of 0.030000</td>
+                                                    </tr>
+                            
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Deposit</td>
+                                                        <td>100.00</td>
+                                                        <td class="text-left">109037- Samadhan choughule is registered under you on level 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Withdrawal</td>
+                                                        <td>35.00</td>
+                                                        <td class="text-left">109037- Samadhan choughule is registered under you on level 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>161403</td>
+                                                        <td>20/04/2022</td>
+                                                        <td>12:04PM</td>
+                                                        <td>Deposit</td>
+                                                        <td>100.00</td>
+                                                        <td class="text-left">109037- Ruby shaw traded under you with size of 0.030000</td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                            
+                                        <div class="table-bottom-border"></div>
+                            
+                                        <div class="pagination-show-row">
+                                            <div class="show-row-div">
+                                                <p class="montserrat-font bottom-show-text">Show</p>
+                                                <select name="" id="" class="show-row-select">
+                                                    <option value="">10</option>
+                                                    <option value="">11</option>
+                                                    <option value="">12</option>
+                                                </select>
+                                            </div>
+                                            <div class="pagination-div">
+                                                <ul class="pagination">
+                                                    <li><a class="montserrat-font" href="#">PREV</a></li>
+                                                    <li><a class="montserrat-font active-page" href="#">1</a></li>
+                                                    <li><a class="montserrat-font inactive-page" href="#">2</a></li>
+                                                    <li><a class="montserrat-font inactive-page" href="#">3</a></li>
+                                                    <li><a class="montserrat-font" href="#">NEXT</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/countries.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
